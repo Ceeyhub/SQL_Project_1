@@ -72,11 +72,15 @@ Answer: 1960 rows - Top selling products - Ballpoint LED light pen
 
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
-SQL Queries:
+SQL Queries:SELECT DISTINCT a."city", a."country", SUM(a."totalTransactionRevenue"/1000000) AS Revenue_Generated
+FROM all_sessions a
+WHERE a.city <> 'not available in demo dataset' AND a.city <> '(not set)' 
+AND a."totalTransactionRevenue" >= 1
+GROUP BY a."city", a."country"
+ORDER BY Revenue_Generated DESC
 
 
-
-Answer:
+Answer: San Francisco has the highest revenue generated from each city - 1561
 
 
 
