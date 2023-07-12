@@ -11,7 +11,7 @@ GROUP BY city, country
 HAVING MAX("totalTransactionRevenue")/1000000 >= 1
 ORDER BY highestTransactionRevenue DESC
 
-Answer: 20 rows 
+Answer: 20 rows, Atlanta, US - city/country with the highest Transaction revenue
 
 
 
@@ -45,7 +45,7 @@ ORDER BY sr."TotalOrdered" DESC
 
 
 
-Answer: 4130 rows
+Answer: 4130 rows...Yes there is a pattern to the types of product categories ordered - Home/office products
 
 
 
@@ -64,7 +64,7 @@ ORDER BY MAX(sr."TotalOrdered") DESC
 
 
 
-Answer: 1960 rows - Top selling products - Ballpoint LED light pen 
+Answer: 1960 rows - Top selling products is Ballpoint LED light pen 
 
 
 
@@ -80,7 +80,7 @@ GROUP BY a."city", a."country"
 ORDER BY Revenue_Generated DESC
 
 
-Answer: San Francisco has the highest revenue generated from each city - 1561
+Answer: San Francisco has the highest revenue generated from each city
 
 
 
