@@ -27,4 +27,4 @@
 
 ## Future Goals
 ### Do more data cleaning to be able to get the Primary and Foreign keys required to link the tables together
-### Do more of the Starting with data questions
+### Do more of the Starting with data questions and Data QA
