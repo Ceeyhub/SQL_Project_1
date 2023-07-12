@@ -4,11 +4,13 @@ Answer the following questions and provide the SQL queries used to find the answ
 **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
 
-SQL Queries:
+SQL Queries: SELECT city, country, MAX("totalTransactionRevenue")/1000000 AS highestTransactionRevenue
+FROM all_sessions a
+GROUP BY city, country
+HAVING MAX("totalTransactionRevenue")/1000000 >= 1
+ORDER BY highestTransactionRevenue DESC
 
-
-
-Answer:
+Answer: 21 rows 
 
 
 
@@ -16,11 +18,16 @@ Answer:
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
-SQL Queries:
+SQL Queries: SELECT a.city, a.country, AVG("OrderedQuantity") AS Average_Visitors_Orders
+FROM all_sessions a
+INNER JOIN products p ON a."SKU" = p."SKU"
+WHERE a.city <> 'not available in demo dataset' AND a.city <> '(not set)'
+GROUP BY a.city, a.country
+ORDER BY Average_Visitors_Orders DESC
 
 
 
-Answer:
+Answer: 268 rows with Council bluffs, United States, AVG Visitors order of 7589
 
 
 
