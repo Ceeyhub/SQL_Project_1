@@ -1,19 +1,26 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
---To analyze sales from the ecommerce website and see by cities, countries generating the most revenue
--- The most purchased product and if there is a reason for it
--- Revenue generated from each city/country and its impact on the total sales
+--To analyze sales data from the ecommerce website
 
 ## Process
-### Uploaded the CSV files to PgAdmin
-### Performed some data cleaning activities - 
+--Uploaded the CSV files to PgAdmin
+--Performed some data cleaning activities - Data Inconsistencies  - City (London), Country (United States)
+-------------Missing Data – lots of missing data (Not set, Not available)
+-------------Duplicate Records – Checked for duplicate rows but didn’t notice any 
+-------------Data entry error – Updated unit price, product price by 1000000
+--Answered the questions in Starting_with_questions and Starting_with_data
+--Identified some risk areas like Data integrity due to inconsistencies in data and some data entry error 
+
 
 ## Results
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+---
 
 ## Challenges 
-(discuss challenges you faced in the project)
+---Loading the all_sessions file to PgAdmin
+--Finding the Primary and Foreign keys to link the tables together
+--To many null, not set or data not available session in the database 
 
 ## Future Goals
-(what would you do if you had more time?)
+--- Do more data cleaning to be able to get the Primary and Foreign keys required to link the tables together
+--- Do more of the Starting with data questions
